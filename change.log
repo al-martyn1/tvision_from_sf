@@ -1,4 +1,13 @@
 $Log: change.log,v $
+Revision 1.91  1999/08/14 00:50:57  set
+* Applied 6 more patches from Laurynas Biveinis <lauras@softhome.net>:
+* Fixed: unnecesary TInputLine scrolling.
+* Fixed: if TListViewer has no scrollbar, it's never redrawed.
+* Fixed: TMenuView bug - ability to execute disabled items.
+* Fixed: TMenuView::updateMenu crash.
+* Fixed: TStringList does not properly read strings.
+* Fixed: TWindow frame lost if valid(cmClose) == False
+
 Revision 1.90  1999/08/11 01:43:49  set
 * Applied 7 patches from Laurynas Biveinis <lauras@softhome.net>, he adapted
 a lot of patches floating around the net for the original TV to this port:
@@ -66,6 +75,9 @@ Revision 1.79  1999/07/17 22:03:37  root (set)
 * Fixed: When exiting and the screen is already suspended I avoid cleaning
 it because it is supposed to be already cleaned. Not sure is the best, I
 tested it in ttyN and ttypN and works ok for the command line options.
+
+-----------------------------------------------------------------------------
+v1.0.7 release.
 
 Revision 1.78  1999/07/13 23:10:05  set
 * Fixed: 18 const name... in the examples. Reported by Matt Mueller
