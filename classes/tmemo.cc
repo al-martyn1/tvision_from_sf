@@ -12,7 +12,7 @@ the size of the memo structure because the old code uses 4Gb ;-)
 
 *****************************************************************************/
 
-#define Uses_string
+#include <string.h>
 
 #define Uses_TKeys
 #define Uses_TEditor
@@ -68,6 +68,8 @@ void TMemo::handleEvent( TEvent& event )
         TEditor::handleEvent(event);
 }
 
+#ifndef NO_STREAM
+
 void TMemo::write( opstream& os )
 {
     TEditor::write( os );
@@ -87,7 +89,7 @@ void *TMemo::read( ipstream& is )
         setBufLen( length );
         }
     else
-        is.seekg( is.tellg() + long(length) );
+        is.seekg( is.tellg() + length );
     return this;
 }
 
@@ -100,3 +102,4 @@ TMemo::TMemo( StreamableInit ) : TEditor( streamableInit )
 {
 }
 
+#endif // #ifndef NO_STREAM

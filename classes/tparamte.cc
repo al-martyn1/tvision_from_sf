@@ -29,7 +29,7 @@
  */
 #include <stdio.h>
 #include <stdarg.h>
-#define Uses_string
+#include <string.h>
 
 #define Uses_TParamText
 #include <tv.h>

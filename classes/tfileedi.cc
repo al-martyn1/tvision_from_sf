@@ -1,5 +1,4 @@
 /* Modified by Robert Hoehne and Salvador Eduardo Tropea for the gcc port */
-/* Modified by Vadim Beloborodov to be used on WIN32 console */
 /*----------------------------------------------------------*/
 /*                                                          */
 /*   Turbo Vision 1.0                                       */
@@ -7,17 +6,12 @@
 /*                                                          */
 /*----------------------------------------------------------*/
 #include <limits.h>
-#define Uses_string
+#include <string.h>
 #include <fstream.h>
-#define Uses_fcntl
-#define Uses_filelength
-#ifdef _MSC_VER
-#include <io.h>
-#else
-#define Uses_unistd
-#endif
+#include <fcntl.h>
+#include <unistd.h>
 #include <stdio.h>
-#define Uses_sys_stat
+#include <sys/stat.h>
 
 #define Uses_TGroup
 #define Uses_TEditor
@@ -26,8 +20,14 @@
 #define Uses_opstream
 #define Uses_ipstream
 #define Uses_TStreamableClass
-#define Uses_IOS_BIN
 #include <tv.h>
+
+#ifndef O_BINARY
+#define O_BINARY 0
+#endif
+#ifndef O_TEXT
+#define O_TEXT 0
+#endif
 
 inline uint32 min( uint32 u1, uint32 u2 )
 {
@@ -54,7 +54,7 @@ TFileEditor::TFileEditor( const TRect& bounds,
 
 void TFileEditor::doneBuffer()
 {
-    DeleteArray(buffer);
+    delete buffer;
 }
 
 void TFileEditor::handleEvent( TEvent& event )
@@ -90,7 +90,7 @@ Boolean TFileEditor::loadFile()
 {
     int crfound = 0,i;
     char tmp[PATH_MAX];
-    ifstream f( fileName, ios::in | IOS_BIN );
+    ifstream f( fileName, ios::in | ios::bin );
     if( !f )
         {
         setBufLen( 0 );
@@ -124,7 +124,7 @@ Boolean TFileEditor::loadFile()
               ::write(writehandle,tmpbuf,fsize);
             close(readhandle);
             close(writehandle);
-            f.open(tmp,ios::in | IOS_BIN);
+            f.open(tmp,ios::in | ios::bin);
           }
         }
         long fSize = filelength( f.rdbuf()->fd() );
@@ -175,7 +175,7 @@ Boolean TFileEditor::saveAs()
     Boolean res = False;
     if( editorDialog( edSaveAs, fileName ) != cmCancel )
         {
-        CLY_fexpand( fileName );
+        fexpand( fileName );
         message( owner, evBroadcast, cmUpdateTitle, 0 );
         res = saveFile();
         if( isClipboard() == True )
@@ -218,7 +218,7 @@ Boolean TFileEditor::saveFile()
        char backupName[PATH_MAX];
        strcpy(backupName,fileName);
        dot = strrchr(backupName,'.');
-       slash = strrchr(backupName,DIRSEPARATOR);
+       slash = strrchr(backupName,'/');
        if (dot < slash) // directory has a dot but not the filename
          dot = NULL;
        if (!dot)
@@ -228,7 +228,7 @@ Boolean TFileEditor::saveFile()
        rename( fileName, backupName );
       }
 
-    ofstream f( fileName, ios::out | IOS_BIN );
+    ofstream f( fileName, ios::out | ios::bin );
 
     if( !f )
         {
@@ -318,6 +318,8 @@ Boolean TFileEditor::valid( ushort command )
     return True;
 }
 
+#ifndef NO_STREAM
+
 void TFileEditor::write( opstream& os )
 {
     TEditor::write( os );
@@ -351,6 +353,8 @@ TStreamable *TFileEditor::build()
 TFileEditor::TFileEditor( StreamableInit ) : TEditor( streamableInit )
 {
 }
+
+#endif
 
 // SET: Changed to lower case because it looks much better when using LFNs
 const char *TFileEditor::backupExt = ".bak";

@@ -16,7 +16,8 @@ code and adapted it to compile with the new port (01/1999).
 
 *****************************************************************************/
 
-#define Uses_ctype
+#include <ctype.h>
+
 #define Uses_TKeys
 // SET: Needed for the new keyboard symbols
 #define Uses_TKeys_Extended
@@ -117,7 +118,7 @@ const ushort *keyMap[] = { firstKeys, quickKeys, blockKeys };
 
 ushort defEditorDialog( int, ... );
 
-#define KeyMap ((const ushort*)(keyMap))
+#define KeyMap ((const ushort far *)(keyMap))
 
 const ushort kbModMask=~kbKeyMask;
 
@@ -1150,6 +1151,8 @@ Boolean TEditor::valid( ushort )
   return isValid;
 }
 
+#ifndef NO_STREAM
+
 void TEditor::write( opstream& os )
 {
     TView::write( os );
@@ -1191,6 +1194,8 @@ TStreamable *TEditor::build()
 TEditor::TEditor( StreamableInit ) : TView( streamableInit )
 {
 }
+
+#endif
 
 // SET: The following routines were assembler in the original TVision, Robert
 // did just a quick hack.
@@ -1289,7 +1294,7 @@ lab2:
   if ((uint32)di == curPtr) goto lab4;
   if ((uint32)di == bufLen) goto lab4;
   // SET: When lines end only with \n it fails
-  #ifndef TVOS_UNIX
+  #ifndef __linux__
   if (buffer[di+bx] != '\n') goto lab4;
   di++;
   #endif
