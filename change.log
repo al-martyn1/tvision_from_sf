@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.427  2003/04/21 18:03:14  set
+* Added: Some documentation about the new TVIntl API.
+
 Revision 2.426  2003/04/21 16:56:56  set
 * Fixed: Alt-X Exit wasn't marked for translation.
 * Added: An i18n example.
@@ -8,7 +11,7 @@ tries in "tvision" domain. It allows separated catalogs for the application
 and the library avoiding duplication.
 * Added: Member to initialize i18n providing a directory to search and some
 tricks used in RHIDE and SETEdit.
-.
+
 Revision 2.425  2003/04/21 16:37:19  set
 * Fixed(?): Use of \r in i18n messages. This is a really bad limitation.
 
