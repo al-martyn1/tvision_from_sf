@@ -1,5 +1,10 @@
 $Log: change.log,v $
-Revision 1.116  1999/10/29 01:50:22  root
+Revision 1.117  1999/10/30 19:23:43  root
+* Changed: Now TScreen is initialized from the TApplication constructor and
+not from a static variable that triggers the constructor. Suggested by
+Christoph Bauer <c_bauer@informatik.uni-kl.de>.
+
+Revision 1.116  1999/10/29 01:50:22  root (set)
 * Added: [Linux] call to dch to update the Debian version. Suggested by Ivan.
 
 Revision 1.115  1999/10/26 00:07:30  set
