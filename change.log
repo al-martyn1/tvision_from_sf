@@ -1,8 +1,12 @@
 $Log: change.log,v $
-Revision 1.241  2001/10/31 01:00:56  root
+Revision 1.242  2001/11/06 23:31:08  root
+* Fixed: A typo in compatlayer.h, it defined sdtio instead of stdio ;-).
+Reported by "Jerzy Witkowski" <jwi@pl.ibm.com>.
+
+Revision 1.241  2001/10/31 01:00:56  set
 * Added: --no-fhs to the configuration. Patch provided by
 jimmy@ncp.infonet.bg.
-.
+
 Revision 1.240  2001/10/25 00:32:12  set
 * Fixed: The gkey.cc program assumed that Linux is the only UNIX ;-) I
 noticed it while trying to test the keyboard routines running Solaris.
