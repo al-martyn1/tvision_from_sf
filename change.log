@@ -1,4 +1,12 @@
 $Log: change.log,v $
+Revision 2.244  2002/08/12 15:56:51  set
+* Added: An example showing how to set the screen/window size using video
+modes and resolutions.
+* Added: A new TScreen flag to know if the driver supports video mode
+change.
+* Fixed: [DOS] The extended video modes needs mode recalculate, so now the
+set font function when we specify Force also force a mode recalculate.
+
 Revision 2.243  2002/08/12 15:53:29  set
 * Fixed: The names of CP 1254 and 1257 from Win32 API.
 * Fixed: [Win32/WinNT] Use of True/False instead of TRUE/FALSE (cosmetic).
@@ -8,7 +16,7 @@ are supported by TV.
 * Added: [Win32/WinNT] More comments about problems I found. Also added the
 list of code pages that Win32 API reference says we can find and which are
 supported by TV.
-.
+
 Revision 2.242  2002/08/12 15:49:19  set
 * Fixed: [Win32/WinNT] The mouse didn't resume. (Missing mouse after
 returning from a shell)
