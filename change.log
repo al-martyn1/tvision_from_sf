@@ -1,5 +1,8 @@
 $Log: change.log,v $
-Revision 1.175  2001/08/29 22:49:01  root
+Revision 1.176  2001/08/29 23:27:07  root
+* Fixed: An error in the config.pl that put libintl.a for Linux target.
+
+Revision 1.175  2001/08/29 22:49:01  set
 * Added: A function to get the name of the shell to the compat layer
 library.
 
