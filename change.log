@@ -1,8 +1,11 @@
 $Log: change.log,v $
+Revision 1.201  2001/09/20 22:26:53  root
+* Fixed: The keyboard internal structure wasn't "endian aware". Wow! now
+the mouse, shadows and keyboard seems to work for PPC and SPARC.
+
 Revision 1.200  2001/09/20 01:11:37  set
 * Modified: Now the configuration script doesn't need pwd, if it fail uses
 cd command.
-
 * Added: Creation of examples/rhide.env for the Win32 target.
 * Added: Now the config.pl updates the win32 Makefile so MinGW users without
 all the needed tools have a chance to compile.
