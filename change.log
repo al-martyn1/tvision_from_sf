@@ -1,8 +1,14 @@
 $Log: change.log,v $
+Revision 2.376  2002/12/09 14:45:34  set
+* Added: [Linux] A configuration variable to indicate the console fails to
+implement the cursor shape escape sequences. It seems to happend with some
+frame buffers, as reported by Martijn. The variable is called
+BrokenCursorShape.
+
 Revision 2.375  2002/12/09 13:14:00  set
 * Modified: [Win32] unistd requested unconditionally, is needed for all the
 Win32 targets.
-.
+
 Revision 2.374  2002/12/09 13:10:26  set
 * Fixed: MinGW doesn't define its version using gcc itself, so we must
 include at least _mingw.h. This is an error in MinGW.
