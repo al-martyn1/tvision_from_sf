@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.87  2002/05/28 15:46:34  set
+* Updated: The TV site and included a copy in the CVS/distribution.
+
 Revision 2.86  2002/05/28 12:48:30  set
 * Added: The first approach for the Palette handling. The user can access
 a couple of TScreen members (get/setPaletteColors) that works using a
@@ -7,7 +10,7 @@ buffers (ActualPalette, OriginalPalette and PC_BIOSPalette). Added the
 capability bits needed to know what's implemented. I implemented it in the
 Linux driver, lamentably Linux lack a mechanism to know the current colors.
 I explain more in linuxdis.cc.
-.
+
 Revision 2.85  2002/05/27 17:46:18  set
 * Added: QNX update from Mike:
 I'm almost done the screen related stuff (only minor bugs remain), 25% done
