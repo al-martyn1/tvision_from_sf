@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.369  2002/12/04 21:18:22  terrible
+* Updated: Debian packaging to 2.0.1-0.1.
+
 Revision 2.368  2002/12/03 12:30:20  set
 * Added: A way to indicate we want to load secondary fonts at start-up.
 They must be provided by the font callback as the primary. I added code to
@@ -26,7 +29,7 @@ modifiers in the event structure.
 Revision 2.363  2002/11/28 18:42:26  set
 * Fixed: The files list said intl/dtou.pl instead of intl/utod.pl.
 
-Revision 2.362  2002/11/28 17:53:41  set
+Revision 2.362  2002/11/28 17:53:40  set
 * Fixed: [X11] Squash! finally killed the f*cking bug. It was the mother of
 race conditions. The strange thing is how useless was efence to detect it.
 The problem was that for a small portion of time the TProgram::buffer
