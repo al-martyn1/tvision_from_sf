@@ -1,9 +1,13 @@
 $Log: change.log,v $
+Revision 2.93  2002/05/29 15:28:20  set
+* Fixed: [FreeBSD] According to miniEleph ldconfig gets mad if we install
+librhtv.so.<full version>, now for this target I install librhtv.so.<major>
+
 Revision 2.92  2002/05/29 13:03:32  set
 * Fixed: TVHC project didn't exclude system headers.
 * Updated: [DOS] project and makefile.
 * Fixed: tvdemo3.cc included help.h directly.
-.
+
 Revision 2.91  2002/05/28 19:28:32  set
 * Fixed: [www] The link to Sigala's port and the supported platforms.
 
