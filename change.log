@@ -1,4 +1,13 @@
 $Log: change.log,v $
+Revision 2.579  2004/10/02 21:00:02  set
+* Fixed: [Darwin] The file libfintl.a must be generated before the dynamic
+lib. My previous try worked because I already installed it during the test.
+* Fixed: [FreeBSD] Even when miniEleph said me that I had to install
+librhtv.so and librhtv.so.2 the fact is that if I use sonames like in the
+other UNIX systems I have to also install librhtv.so.2.0.3. I understand
+that's unusual for FreeBSD and also that my versions are wrong but that's
+the only way to get a usable setup.
+
 Revision 2.578  2004/10/01 21:35:27  set
 * Added: Support for NetBSD:
   * install moves files by default so we need to add -c.
@@ -15,14 +24,14 @@ Revision 2.578  2004/10/01 21:35:27  set
   * ranlib must be run *after* installing a static lib.
   * strip --strip-debug => -S.
   * ldconfig doesn't exist.
-.
+
 Revision 2.577  2004/09/30 20:56:16  set
 * Fixed: [XTerm] The "get window title" escape sequence was reported to be
 exploitable. For this reason new versions of xterm and Eterm doesn't
 respond to this request. It made the library wait for the reply. So the
 programs didn't continue until the user pressed a key. Now I added a 300 ms
 timeout.
-.
+
 Revision 2.576  2004/09/30 20:55:36  set
 * Added: [Config] OpenBSD as known OS. Tested with OpenBSD 3.4.
 * Fixed: [XTerm] input problems with *BSD systems. They interpret VMIN in a
