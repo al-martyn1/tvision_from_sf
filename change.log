@@ -1,5 +1,8 @@
 $Log: change.log,v $
-Revision 2.17  2001/11/25 18:46:44  root
+Revision 2.18  2001/11/25 19:07:33  root
+* Added: TEditorApp dependency (TApplication) to the tv.h.
+
+Revision 2.17  2001/11/25 18:46:44  set
 * Modified: compatlayer.h should be included just once as tv.h, but this
 isn't the case for all the applications and enforces a policy that doesn't
 have to be the same used by other projects. For this reason I removed the
