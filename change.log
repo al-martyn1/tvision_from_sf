@@ -1,5 +1,8 @@
 $Log: change.log,v $
-Revision 1.60  1999/06/09 00:42:38  root
+Revision 1.61  1999/06/11 00:21:52  set
+* Included some files I forgot in the list (keyboard extender and pif
+example).
+
 -----------------------------------------------------------------------------
 v1.0.6 release.
 
