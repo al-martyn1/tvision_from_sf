@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.399.2.59  2003/05/09 13:10:01  set
+* Added: A check to determine if the configure script is newer than the
+cache. If that's the case the cache is discarded.
+
 Revision 2.399.2.58  2003/05/09 12:23:01  set
 * Fixed: I forgot to initialize intlLabel in inputBoxRect.
 * Added: A small example for inputBox to the demo example.
@@ -18,7 +22,7 @@ applied:
   be useful.
 * tvutils.h enhancement: defined min/max for any data type (using
   templates). Vincent Van Den Berghe idea.
-.
+
 Revision 2.399.2.57  2003/05/07 19:17:45  set
 * Added: [Linux] Now the Ctrl+Tab is mapped to Tab so TV applications can
 use it.
