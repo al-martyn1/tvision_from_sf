@@ -1,4 +1,15 @@
 $Log: change.log,v $
+Revision 1.151  2000/05/20 20:02:21  set
+* Modified: The generated make file to use PHONY and force a real check of
+all the dependencies even if the library is already generated.
+* Added: Now the win32/Makefile file is generated from the djgpp's file
+during the configuration process. For this I modified the djgpp/vga* files to
+produce no code if they are compiled without djgpp.
+* Added: a thanks section to the main readme.
+* Added: some details in the readme, specially about RMS doubts and what I'm
+doing about it. Also to make clear the win32 and winnt targets are there and
+both works for win32.
+
 Revision 1.150  2000/05/16 02:08:05  set
 * Added: A new constructor for TListBox and TSortedListBox that accepts two
 scroll bars. I don't know why original TV lacks it when TListViewer have it
@@ -7,7 +18,7 @@ scroll bars. I don't know why original TV lacks it when TListViewer have it
 left or right key and the viewer have and horizontal scroll bar and there is
 just one column the handleEvent calls to the scroll bar handleEvent instead
 of just return. I think that's very sensitive.
-
+.
 Revision 1.149  2000/05/13 16:02:39  set
 * Fixed: Yet another call to delete without []. Pointed out by Laurynas.
 .
