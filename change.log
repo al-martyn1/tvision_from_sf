@@ -1,8 +1,12 @@
 $Log: change.log,v $
+Revision 2.485  2003/06/30 13:04:11  set
+* Added: A script to update from CVS using the options I use. A DOS batch
+file and a shell script are provided.
+
 Revision 2.484  2003/06/26 19:15:58  set
 * Added: Some clarifications about install process.
 * Added: Explanation about how to use the rhtv-config tool.
-.
+
 Revision 2.483  2003/06/23 14:12:02  set
 * Added: now is posible to indicate the installation prefix for the
 makefile even after configuring another value.
