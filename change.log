@@ -1,4 +1,10 @@
 $Log: change.log,v $
+Revision 1.242.2.15  2002/01/01 01:27:12  set
+* Added: Code to avoid collisions between the last changes in tv/intl.h and
+djgpp's conio. Note that gettext instructs users on how to change libc to
+avoid such a collision.
+* Changed: Version to 1.1.4.
+
 Revision 1.242.2.14  2001/12/31 21:47:31  set
 * Modified: Now if gettext isn't detected the configuration uses the fake
 internationalization dummy. It can be disabled with --no-intl. Why? it allows
@@ -1541,7 +1547,7 @@ on a crazy report by "a.meyer" <hexx3000@schaltzentrale.mvnet.de> ;-).
 * Added a Uses_TColorCommands request for the cmUpdateColorsChanged located
 in colorsel.h.
 .
-Revision 1.20  1999/02/02 23:03:19  root (set)
+Revision 1.20  1999/02/02 23:03:19  set
 * Adapted the TEditor family to Linux (file I/O stuff and \r\n differences).
 
 Revision 1.19  1999/02/02 01:55:54  set
