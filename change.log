@@ -1,10 +1,13 @@
 $Log: change.log,v $
+Revision 2.161  2002/06/19 18:43:35  set
+* Modified: [WWW] The QNX port is now finished, added as available target.
+
 Revision 2.160  2002/06/19 17:10:12  set
 * Added: [Linux] support for russian keyboards when the encoding is KOI8.
 Alexey Godin gave me the information about the layout. I tested it using
 the koi8-r fonts and ru1 keyboard map in my system + a translation of the
 "File" menu and worked.
-.
+
 Revision 2.159  2002/06/18 20:50:37  set
 * Added: TScroller and TScrollBar now cooperates with Braille Terminals.
 From suggestions by Tapio.
