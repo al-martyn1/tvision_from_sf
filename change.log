@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.399.2.144  2003/12/12 13:24:48  set
+* Fixed some mouse issues for the QNX6.
+* Fixed tvision.qpg file, added proper library dependencies.
+.
 Revision 2.399.2.143  2003/12/09 16:03:14  set
 * Added: A new argument to the optional TListBox constructor and a new
 member to TListView. They allow to create TListBox-es that centers the
