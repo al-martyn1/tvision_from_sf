@@ -1,4 +1,9 @@
 $Log: change.log,v $
+Revision 1.58  1999/06/05 02:18:59  set
+* Modified: The destroy0 macro to be possible your use in cases like:
+if (...) destroy0(...); Suggested by Laurynas Biveinis <lauras@softhome.net>.
+Patch from Laurynas rejected because is not practical (generates temporals).
+
 Revision 1.57  1999/06/05 01:35:19  set
 * Fixed: Calls to delete without using []. According to new standards:
 Here is text from a relative old draft of the standard:
@@ -40,7 +45,7 @@ Patches to add [] in some necesary places and FAQ quotation provided by
 Laurynas Biveinis <lauras@softhome.net>.
 I also applied the part that says that is not necesary to cast a const
 char * to char * when calling delete.
-
+.
 Revision 1.56  1999/06/05 00:40:35  set
 * Fixed: Some key bindings in TEditor class (Enter and Backspace for example).
 * Modified: Now the doEditDialog function provided in tvedit3.cc can be used
