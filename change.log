@@ -1,7 +1,11 @@
 $Log: change.log,v $
+Revision 2.175  2002/06/24 19:39:04  set
+* Modified: [QNX] When linking the dynamic library -lncursesS should be
+used, explained by Mike.
+
 Revision 2.174  2002/06/24 19:31:00  set
 * Added: [QNX] Package description contributed by Mike.
-.
+
 Revision 2.173  2002/06/24 15:17:42  set
 * Fixed: A typedef struct v.s. struct issue reported by gcc 3.1. Reported
 by Ortwin.Gasper@t-online.de.
