@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.399.2.83  2003/05/29 18:35:24  set
+* Added: [BC++] Definition of __inline__ as inline in compatlayer.h. This
+will avoid command line definitions.
+
 Revision 2.399.2.82  2003/05/29 18:29:22  set
 * Modified: Now the global function destroy is called CLY_destroy, new code
 should use the function with this name. For compatibility most targets
@@ -16,7 +20,7 @@ CLY_DONT_DEFINE_MIN_MAX to 1 and avoid the collisions. It will most
 probably help Mike to compile with MSVC 7.0, was needed for BC++ 5.6.
 * Added: [BC++] Some code to the example to print the compiler version and
 to test the streams.
-.
+
 Revision 2.399.2.81  2003/05/23 16:13:53  set
 * Added: Version to the configuration tool for easy detecttion.
 
