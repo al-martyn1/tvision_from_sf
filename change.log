@@ -1,7 +1,12 @@
 $Log: change.log,v $
+Revision 1.105  1999/09/17 03:38:30  root
+* Added: Support for the FHS in the configure script (not used for the
+library).
+* Fixed: Some details of the configure process for Linux.
+
 Revision 1.104  1999/09/16 02:26:54  set
 * Modified: Now the file open dialog have space for 2 more filenames.
-
+.
 Revision 1.103  1999/09/12 19:47:54  set
 * Moved a lot of code from the config.pl script to conflib.pl to share it
 with the editor.
