@@ -1,4 +1,11 @@
 $Log: change.log,v $
+Revision 2.314  2002/09/16 14:29:41  set
+* Added: [XTerm] Support for "application mode" keys (4 arrows, home and
+end). Also modified the Xterm.res script to use them. These keys works ok
+for bash (readline) and mc (slang?).
+* Added: [XTerm] A correct color palette to the Xterm.res script the one
+used by xterm in my system doesn't match VGA BIOS.
+
 Revision 2.313  2002/09/16 14:28:55  set
 * Added: Eterm driver information to "doc" directory.
 * Modified: The Eterm theme and moved to an independent directory. Is quite
@@ -7,7 +14,7 @@ functional.
 XTerm.
 * Fixed: [Eterm] GetCurrentFontName() doesn't work on Eterm, must return
 error. If I don't do it Eterm thinks I want to set a font called "?".
-.
+
 Revision 2.312  2002/09/16 14:26:33  set
 * Added: Experimental support for X11 under Win32. I just enabled the code
 for Cygwin, isn't tested.
