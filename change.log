@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.79  2002/05/20 15:23:57  set
+* Added: QNX skeleton files from Mike. I changed the code a little bit to
+generate the most important dependencies even when using Linux's RHIDE.
+
 Revision 2.78  2002/05/20 15:08:43  set
 * Modified: Now the Linux code is in a separated driver. The old code is
 now the UNIX driver.
@@ -10,7 +14,7 @@ driver doesn't need ncurses and have the following new features:
  * The colors and attributes of the console are saved/restored.
  * get/setWindowTitle can affect what ps reports if the user helps the
  library providing pointers to argv and environ.
-.
+
 Revision 2.77  2002/05/17 18:54:31  set
 * Added: More configuration patches for QNX from Mike. Complements the
 special flags for dynamic libs patch and workarounds a library search
