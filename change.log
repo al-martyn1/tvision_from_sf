@@ -1,8 +1,12 @@
 $Log: change.log,v $
+Revision 1.23  1999/02/16 00:33:56  set
+* Added more information in readme.txt and fixed some typos.
+* Changed the version to 1.0.4 because I'll release it soon.
+
 Revision 1.22  1999/02/10 22:10:29  set
 * Fixed a bug in the new terminals code for frames (I forgot to initialize
 the array when we use the PC characters).
-
+.
 Revision 1.21  1999/02/07 13:56:54  set
 * Added a "Try" button to the TColorDialog. It makes a redraw of the screen
 and generates a cmUpdateColorsChanged broadcast. The broadcast should be used
