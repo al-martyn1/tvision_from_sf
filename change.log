@@ -1,5 +1,9 @@
 $Log: change.log,v $
-Revision 2.19  2001/11/28 23:41:26  root
+Revision 2.20  2001/11/29 23:08:41  root
+* Modified: Solaris have nl_langinfo so we don't need to use the
+replacement. I didn't check if this correction works.
+
+Revision 2.19  2001/11/28 23:41:26  set
 * Added: getopt when Solaris is detected.
 
 Revision 2.18  2001/11/25 19:07:33  set
