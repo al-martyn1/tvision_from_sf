@@ -1,5 +1,9 @@
 $Log: change.log,v $
-Revision 1.207  2001/09/25 02:17:04  root
+Revision 1.208  2001/09/25 23:08:01  root
+* Added: [Linux] Support for /dev/vc/NN devices in the keyboard routines.
+Thanks to Andris, he have a system that uses it.
+
+Revision 1.207  2001/09/25 02:17:04  set
 * Fixed: Problems in TEditor class when handling UNIX files.
 * Fixed: A bug introduced by JASC while adapting teditorf.cc to work for
 big endian platforms. It rendered TEditor buffers as only spaces ;-)
