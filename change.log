@@ -1,7 +1,12 @@
 $Log: change.log,v $
+Revision 1.129  2000/02/01 00:03:12  root
+* Fixed: [Linux] An old annoying "feature" that made the code report control
+(arrows, etc.) keys as ASCII valid values. I got it reported many times but
+finally Andris triggered the fix.
+
 Revision 1.128  2000/01/29 15:27:42  set
 * NEW: Merged patches from Vadim Beloborodov to support Win32 console.
-
+.
 Revision 1.127  2000/01/26 00:27:35  set
 * Added: A new couple of TScreen members to Set/Get the window title under
 Windows 9x. I hope to extend it to xterm.
