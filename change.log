@@ -1,4 +1,13 @@
 $Log: change.log,v $
+Revision 2.399.2.177  2004/08/12 19:01:32  set
+* Added: Compatibility with gcc 3.4 streams. It isn't fully compatible with
+3.1-3.3 but defines a special filebuf that can be created from a C stream.
+Andris suggested it.
+* Fixed: gcc 3.4 seems to enforce a much more strict selection of
+overloaded operators when a minimal ambiguity appears. To solve it the
+operands must be casted. In this case stream offsets can't be added to long
+values, casting the long value to a stream offset solves the problem.
+
 Revision 2.399.2.176  2004/07/29 20:35:28  set
 * Added: When you disable a TLabel the linked object gets disabled. After
 all what other thing could be expected?
@@ -7,7 +16,7 @@ the "disabled button" color because we don't have much space in the pal.
 * Added: TRadioButtons have a new member setEnableMask, with it you can
 control the enabled/disabled state of upto 32 TViews without needing to
 inherit a new class.
-.
+
 Revision 2.399.2.175  2004/07/03 00:07:52  set
 * Fixed: [X11] Some gcc versions can optimize "while (!safeToUnHook);" to
 an endless loop. Patch by Andris.
