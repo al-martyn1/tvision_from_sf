@@ -1,3 +1,6 @@
 $Log: change.log,v $
-Revision 2.0  2001/11/24 23:12:33  root
+Revision 2.1  2001/11/24 23:18:11  root
+* Added: X library detection to the configuration.
+
+Revision 2.0  2001/11/24 23:12:33  set
 * New change.log file created.
