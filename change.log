@@ -1,10 +1,16 @@
 $Log: change.log,v $
+Revision 2.545  2004/06/14 14:42:42  set
+* Fixed: [X11] A race condition in the update thread code. It was possible
+that a SIGALRM arrived after destroying the TScreen class and before we
+exited killing the program with the signal. Observed using valdrind (which
+made the exit really slow ;-)
+
 Revision 2.544  2004/06/11 21:27:05  set
 - From valgrind:
 * Fixed: Leaks in  TVFontCollection::CreateListOfFonts and
 TVConfigFile::FreeList.
 * Added: Clean-up to TVCodePage.
-.
+
 Revision 2.543  2004/06/03 18:47:07  set
 * Added: [config] HP-UX detection. Contributed by Dmitry V. Zavyalov
 (dzavyalov/artezio/ru).
