@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.531  2004/04/14 15:41:12  set
+* Fixed: Oops! the patch from the Unicode branch didn't apply propperly,
+now is fixed and the code compiles.
+
 Revision 2.530  2004/04/14 15:34:01  set
 * Modified: When clicking in an object: if it doesn't receive the focus we
 no longer pass the the mouse event to this object. I think it doesn't have
@@ -11,7 +15,7 @@ available is one to avoid passing the focus when the validator indicates the
 data is invalid.
 * Modified: Now dialogs become "inactive" (sfActive=False) after execution.
 In this way TView childs can know when the dialog is no longer running.
-.
+
 Revision 2.529  2004/03/18 18:03:18  set
 * Fixed: [BC++] The version to use ISO C++ 1998 stuff seems to be >= 0x560.
 From a report by Hartmut Welpmann <hartmut.welpmann@gmx.de>
