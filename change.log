@@ -1,5 +1,9 @@
 $Log: change.log,v $
-Revision 1.242.2.4  2001/11/25 19:06:39  root
+Revision 1.242.2.5  2001/11/28 23:30:06  root
+* Fixed: gkeyli.cc declared getshiftstate as inline for any OS different
+than Linux (made Solaris fail).
+
+Revision 1.242.2.4  2001/11/25 19:06:39  set
 * Added: TEditorApp dependency (TApplication) to the tv.h.
 
 Revision 1.242.2.3  2001/11/25 18:44:28  set
