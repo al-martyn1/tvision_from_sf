@@ -1,8 +1,13 @@
 $Log: change.log,v $
-Revision 2.25  2001/12/18 02:34:11  root
+Revision 2.26  2001/12/30 16:15:10  set
+* Fixed: I wrongly changed the code used for the BC++ 5.5 target to yield
+the processor to use the MinGW version. It made applications eat 100% of
+the CPU.
+
+Revision 2.25  2001/12/18 02:34:11  set
 * Added: Fine grained protection against multiple inclutions in compatlayer
 header.
-.
+
 Revision 2.24  2001/12/17 00:20:32  set
 * Added: A new URL to the Borland's FAQ that says TV is Public Domain. This
 is supported by all the TeamB people I contacted.
