@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.539  2004/05/24 15:45:15  set
+* Fixed: [Win32] The keypad / key for the WinNT driver. From information
+provided by: Warren H. Holt (wHolt/drs-ewns/com)
+.
 Revision 2.538  2004/05/24 14:48:44  set
 * Modified: [config] Use of "g++" in favor of "gcc -lstdc++". This is
 because newer gcc 3.x compilers can't compile C++ code without doing a
