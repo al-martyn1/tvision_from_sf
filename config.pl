@@ -100,6 +100,7 @@ $MakeDefsRHIDE[2].=' iconv' if (@conf{'iconv'} eq 'yes') && !$UseDummyIntl;
 $MakeDefsRHIDE[2].=' '.$conf{'NameCurses'}.' m' if ($OS eq 'UNIX');
 $MakeDefsRHIDE[2].=' gpm' if @conf{'HAVE_GPM'} eq 'yes';
 $MakeDefsRHIDE[2].=' mss' if @conf{'mss'} eq 'yes';
+$MakeDefsRHIDE[2].=' intl' if (($OSf eq 'FreeBSD') && ($conf{'intl'} eq 'yes');
 if ($OS eq 'UNIX')
   {
    $MakeDefsRHIDE[0]='RHIDE_STDINC=/usr/include /usr/local/include /usr/include/g++ /usr/local/include/g++ /usr/lib/gcc-lib /usr/local/lib/gcc-lib';
@@ -137,7 +138,8 @@ if ($OS ne 'Win32')
    $MakeDefsRHIDE[3].=' ../../intl/dummy' if $UseDummyIntl;
    $ExtraModifyMakefiles{'vpath_src'}="../classes/win32 ../stream ../names ../classes .. ../djgpp\nvpath %.h ../djgpp";
    `cp djgpp/makefile win32/Makefile`;
-   ModifyMakefiles('win32/Makefile');
+   ModifyMakefiles('win32/Makefile','compat/compat.mak');
+   CreateRHIDEenvs('examples/rhide.env','win32/rhide.env');
   }
 # Help BC++ target
 `perl confignt.pl`;
@@ -367,6 +369,7 @@ int main(void)
 }
 ';
  $intllib=(($OS eq 'DOS') || ($OS eq 'Win32')) ? '-lintl' : '';
+ $intllib='-L/usr/local/lib -lintl' if ($OSf eq 'FreeBSD');
  $test=RunGCCTest($GCC,'c',$intltest,'-Iinclude/ '.$intllib);
  if ($test ne "OK\n")
    {
