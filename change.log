@@ -1,8 +1,12 @@
 $Log: change.log,v $
+Revision 2.169  2002/06/24 15:01:35  set
+* Modified: [DJGPP] to use /dev/env/DJDIR/etc as directory for
+configuration.
+
 Revision 2.168  2002/06/24 15:00:29  set
 * Fixed: A couple of errors in new classes exposed when compiling for
 djgpp.
-.
+
 Revision 2.167  2002/06/24 14:59:25  set
 * Added: "Priority" variable to the configuration section of each driver.
 So now you can change the importance of each driver. The section names of
