@@ -1,8 +1,13 @@
 $Log: change.log,v $
+Revision 2.365  2002/11/29 12:49:07  set
+* Modified: Moved CLY_Beep to TScreen::Beep. It allows drivers that needs
+access to low level stuff to define it properly. X11 is a clear case, you
+must have access to the display.
+
 Revision 2.364  2002/11/28 20:49:55  set
 * Fixed: [X11] The driver reported the wrong kind of flags for key
 modifiers in the event structure.
-.
+
 Revision 2.363  2002/11/28 18:42:26  set
 * Fixed: The files list said intl/dtou.pl instead of intl/utod.pl.
 
