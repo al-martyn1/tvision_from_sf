@@ -3,7 +3,7 @@ Microsoft Visual C compiler. Note that I don't have it and Microsoft doesn't
 offer reduced versions for free like Borland does. For this reason this
 target ever lags behind. I need volunteer to test this target periodically.
 
-$Id: msvc.txt,v 1.3 2003/06/26 19:15:58 set Exp $
+$Id: msvc.txt,v 1.4 2004/10/28 20:44:26 set Exp $
 
 1. INTRODUCTION
 2. HOW TO COMPILE
@@ -17,7 +17,7 @@ $Id: msvc.txt,v 1.3 2003/06/26 19:15:58 set Exp $
 find any problem just do the same the other users did: help to fix them.
   You can also create Win32 versions of this package using BorlandC Builder,
 Cygwin or MinGW.
-  Versions 5.0, 6.0 and 7.0 compiled the code.
+  Versions 5.0, 6.0, 7.0 and 7.1 compiled the code.
 
 
 2. HOW TO COMPILE
