@@ -1,8 +1,12 @@
 $Log: change.log,v $
+Revision 2.40  2002/02/21 01:07:39  root
+* Fixed: Some details to allow compiling under Linux. The code now
+compiles.
+
 Revision 2.39  2002/02/20 01:31:25  set
 * Fixed: gcc 3.x problems with GetStrStream() macro. Reported and solution
 by Andris.
-.
+
 Revision 2.38  2002/02/03 19:45:40  set
 * Modified: Moved mouse.cc code to tevent.cc. It contains mouseInt() which
 was reworked.
