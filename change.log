@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.399.2.151  2004/04/14 15:28:54  set
+* Fixed: Errors in the insert/overwrite logic of the new TInputLine code.
+
 Revision 2.399.2.150  2004/04/14 15:24:06  set
 * Modified: When clicking in an object: if it doesn't receive the focus we
 no longer pass the the mouse event to this object. I think it doesn't have
@@ -11,7 +14,7 @@ available is one to avoid passing the focus when the validator indicates the
 data is invalid.
 * Modified: Now dialogs become "inactive" (sfActive=False) after execution.
 In this way TView childs can know when the dialog is no longer running.
-.
+
 Revision 2.399.2.149  2004/04/12 14:35:23  set
 * Added: [config] another patch for compatibility with autotools. Patch by
 Aurelian.
