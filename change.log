@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.399.2.211  2004/10/15 23:40:42  set
+* Fixed: [Win32][gcc 3.x] gcc 3.3.3 warning in WinGr code (using char as
+array index).
+
 Revision 2.399.2.210  2004/10/15 23:33:09  set
 * Fixed: [Win32] The Win32 driver: when the application or configuration
 file requested a screen size bigger than 80x25 the code failed to register
@@ -11,7 +15,7 @@ some internal functions. Reported by gcc 3.x.
 version 3.1.0 using MSYS 1.0.10 and SiePerl 5.6.1. Note that the gdb
 included with it is useless for the system I used (Win98SE) but the 6.0
 version is usable (with a lot of limitations :-(
-.
+
 Revision 2.399.2.209  2004/10/14 19:24:51  set
 * Modified: [Compilation] The dependencies extractor to put the OBJFILES
 definition before its use. It should help nmake.
