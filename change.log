@@ -1,8 +1,16 @@
 $Log: change.log,v $
+Revision 2.38  2002/02/03 19:45:40  set
+* Modified: Moved mouse.cc code to tevent.cc. It contains mouseInt() which
+was reworked.
+* Added: a new THWMouse member called drawCounter, used when the mouse is
+drawn asynchronically by an interrupt. It can be accessed using TMouse
+members: resetDrawCounter() and getDrawCounter(). Only needed by TView to
+know if the mouse was updated while drawing to screen.
+
 Revision 2.37  2002/02/02 15:20:08  set
 * Modified: Now OS specific headers are in separated directories. Example:
 tv/linuxscr.h is now tv/linux/screen.h.
-.
+
 Revision 2.36  2002/01/27 17:05:10  set
 * Merged Ivan patches for Debian 1.1.4-1 package.
 
