@@ -1,4 +1,12 @@
 $Log: change.log,v $
+Revision 1.115  1999/10/26 00:07:30  set
+* Added: TFileDialog is now "growable".
+* Added: [Linux] TScreen disables the Xon/Xoff flow control so ^Q/^S can be
+used in X terminals.
+
+-----------------------------------------------------------------------------
+v1.0.9 release.
+
 Revision 1.114  1999/10/17 22:30:03  set
 * Updated for release of 1.0.9.
 
