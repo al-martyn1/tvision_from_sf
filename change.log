@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.551  2004/06/25 19:30:54  set
+* Added: [MSVC] a simple bool/true/false replacement to compatlayer.
+.
 Revision 2.550  2004/06/25 14:17:32  set
 * Fixed: [MSVC] the WinGr driver can't be compiled with 4.0 because it uses
 too much features only available in newer versions.
