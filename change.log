@@ -1,5 +1,10 @@
 $Log: change.log,v $
-Revision 1.203  2001/09/21 02:30:20  root
+Revision 1.204  2001/09/22 02:16:56  root
+* Modified: [UNIX] The behavior of file attribute functions of compat
+layer, now the IsReadOnly tries to be a little more cleaver looking for the
+file group and the groups where the user is.
+
+Revision 1.203  2001/09/21 02:30:20  set
 * Fixed: New standards seems to enforce a \n at the end of all sources. At
 least gcc 3.0 says that. I added it to all the tests in the configuration
 scripts.
