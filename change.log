@@ -1,11 +1,15 @@
 $Log: change.log,v $
+Revision 2.334  2002/09/23 12:37:24  set
+* Added: Win32 and WinGr documentation.
+* Modified: X11 docs, added the fact that X11 driver can be used for Win32.
+
 Revision 2.333  2002/09/23 12:34:24  set
 * Added: DOS driver, code pages and configuration file documentation.
 * Modified: Added most structure to all the other docs.
 * Modified: [DOS] Made PollMouse=1 and SaveVGAState=0 the defaults. I think
 this gives more chances to get things working in the first try. If the user
 wants to get better support s/he can read the docs.
-.
+
 Revision 2.332  2002/09/23 12:32:28  set
 * Fixed: [X11] The 27 to 31 ASCII range wasn't mapped to any key, they are
 used for ^{ ^\ ^} ?? ^/.
