@@ -1,4 +1,9 @@
 $Log: change.log,v $
+Revision 2.31  2002/01/01 01:28:23  set
+* Added: Code to avoid collisions between the last changes in tv/intl.h and
+djgpp's conio. Note that gettext instructs users on how to change libc to
+avoid such a collision.
+
 Revision 2.30  2001/12/31 21:59:23  set
 * Modified: Now if gettext isn't detected the configuration uses the fake
 internationalization dummy. It can be disabled with --no-intl. Why? it allows
@@ -12,7 +17,7 @@ DOS, in this way I avoid using iconv.
 *** IMPORTANT *** I don't include libintl.h anymore and assume the
 prototypes. This helps with the dummy and I doubt it will collide. If some
 day it collides the configuration could indicate how to solve it.
-.
+
 Revision 2.29  2001/12/30 23:34:07  set
 * Fixed: A couple of new[]/delete style missmatches while debugging setedit
 with MSS 1.2.1.
