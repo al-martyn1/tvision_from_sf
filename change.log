@@ -1,4 +1,10 @@
 $Log: change.log,v $
+Revision 1.242.2.12  2001/12/30 18:31:09  set
+* Added: Support for MSS 1.2.1 and fixed missing delete [] in demo. Patches
+by Laurynas.
+* Added: Configuration options to use MSS and documentation in the readme.
+* Fixed: Various missing delete [] in the classes.
+
 Revision 1.242.2.11  2001/12/30 16:12:45  set
 * Fixed: I wrongly changed the code used for the BC++ 5.5 target to yield
 the processor to use the MinGW version. It made applications eat 100% of
@@ -1584,7 +1590,7 @@ djgpp.
 Revision 1.8  1999/01/13 00:55:43  set
 Passed the changes to DOS.
 
-Revision 1.7  1999/01/13 00:35:35  root (set)
+Revision 1.7  1999/01/13 00:35:35  set
 Added a linuxso directory to create the dynamically linked version of the
 library.
 

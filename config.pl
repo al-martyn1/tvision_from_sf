@@ -55,7 +55,6 @@ if ($OS eq 'UNIX')
    LookForGPM($GPMVersionNeeded);
    LookForNCurses($NCursesVersionNeeded);
    LookForKeysyms();
-   LookForXlib();
    #LookForOutB();
   }
 LookForIntlSupport();
@@ -84,12 +83,11 @@ $MakeDefsRHIDE[2].=' intl' if (($OS eq 'DOS') || ($OS eq 'Win32')) && (@conf{'in
 $MakeDefsRHIDE[2].=' iconv' if (@conf{'iconv'} eq 'yes');
 $MakeDefsRHIDE[2].=' '.$conf{'NameCurses'}.' m' if ($OS eq 'UNIX');
 $MakeDefsRHIDE[2].=' gpm' if @conf{'HAVE_GPM'} eq 'yes';
-$MakeDefsRHIDE[2].=' '.$conf{'X11Lib'} if ($conf{'HAVE_X11'} eq 'yes');
+$MakeDefsRHIDE[2].=' mss' if @conf{'mss'} eq 'yes';
 if ($OS eq 'UNIX')
   {
    $MakeDefsRHIDE[0]='RHIDE_STDINC=/usr/include /usr/local/include /usr/include/g++ /usr/local/include/g++ /usr/lib/gcc-lib /usr/local/lib/gcc-lib';
    $MakeDefsRHIDE[3]='TVOBJ=../../linux '.$here.'/linux '.@conf{'prefix'}.'/lib';
-   $MakeDefsRHIDE[3].=' '.$conf{'X11LibPath'} if ($conf{'HAVE_X11'} eq 'yes');
    ModifyMakefiles('linux/Makefile','compat/compat.mak');
    CreateRHIDEenvs('linux/rhide.env','examples/rhide.env','compat/rhide.env');
   }
@@ -183,13 +181,13 @@ sub SeeCommandLine
       {
        $conf{'fhs'}='no';
       }
-    elsif ($i=~'--X11lib=(.*)')
+    elsif ($i eq '--with-mss')
       {
-       $conf{'X11Lib'}=$1;
+       $conf{'mss'}='yes';
       }
-    elsif ($i=~'--X11path=(.*)')
+    elsif ($i eq '--without-mss')
       {
-       $conf{'X11LibPath'}=$1;
+       $conf{'mss'}='no';
       }
     else
       {
@@ -209,8 +207,8 @@ sub ShowHelp
  print "--no-fhs       : force to not use the FHS layout under UNIX.\n";
  print "--cflags=val   : normal C flags [default is env. CFLAGS].\n";
  print "--cxxflags=val : normal C++ flags [default is env. CXXFLAGS].\n";
- print "--X11lib=val   : Name of X11 library [default is X11].\n";
- print "--X11path=val  : Path for X11 library [default is /usr/X11R6/lib].\n";
+ print "--with-mss     : compiles with MSS memory debugger.\n";
+ print "--without-mss  : compiles without MSS [default].\n";
 }
 
 sub GiveAdvice
@@ -388,44 +386,6 @@ int main(void)
    {
     $conf{'HAVE_KEYSYMS'}='no';
     print " no, disabling enhanced support for Eterm 0.8.10+\n";
-   }
-}
-
-sub LookForXlib()
-{
- my $test;
-
- print 'Looking for X11 libs: ';
- if (@conf{'HAVE_X11'})
-   {
-    print "@conf{'HAVE_X11'} (cached)\n";
-    return;
-   }
- $test='
-#include <stdio.h>
-#include <X11/Xlib.h>
-#include <X11/Xutil.h>
-#include <X11/keysym.h>
-Display *Test()
-{ return XOpenDisplay(""); }
-int main(void)
-{
- printf("OK, %d.%d\n",X_PROTOCOL,X_PROTOCOL_REVISION);
- return 0;
-}
-';
- $conf{'X11LibPath'}='/usr/X11R6/lib' unless $conf{'X11LibPath'};
- $conf{'X11Lib'}='X11' unless $conf{'X11Lib'};
- $test=RunGCCTest($GCC,'c',$test,"-L$conf{'X11LibPath'} -l$conf{'X11Lib'}");
- if ($test=~/OK, (\d+)\.(\d+)/)
-   {
-    $conf{'HAVE_X11'}='yes';
-    print "yes OK (X$1 rev $2)\n";
-   }
- else
-   {
-    $conf{'HAVE_X11'}='no';
-    print "no, disabling X11 version\n";
    }
 }
 
@@ -680,13 +640,13 @@ sub GenerateMakefile
 
 sub CreateConfigH
 {
- my $text="/* Generated automatically by the configure script */",$old;
+ my $text="/* Generated automatically by the configure script */";
+ my $old;
 
  print 'Generating configuration header: ';
 
  $text.=ConfigIncDef('HAVE_DEFINE_KEY','ncurses 4.2 or better have define_key (In Linux)');
  $text.=ConfigIncDefYes('HAVE_KEYSYMS','The X11 keysyms are there');
- $text.=ConfigIncDefYes('HAVE_X11','X11 library and headers');
  $conf{'HAVE_INTL_SUPPORT'}=@conf{'intl'};
  $text.=ConfigIncDefYes('HAVE_INTL_SUPPORT','International support with gettext');
  $text.=ConfigIncDefYes('HAVE_GPM','GPM mouse support');
@@ -698,6 +658,7 @@ sub CreateConfigH
  $text.="#define TVCPU_$CPU\n";
  $text.="#define TVComp_$Comp\n";
  $text.="#define TVCompf_$Compf\n";
+ $text.="\n#define MSS\n#include <mss.h>\n" if @conf{'mss'} eq 'yes';
 
  $old=cat('include/tv/configtv.h');
  if ($text eq $old)
