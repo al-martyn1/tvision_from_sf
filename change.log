@@ -1,4 +1,12 @@
 $Log: change.log,v $
+Revision 1.24  1999/02/18 02:41:34  set
+* Compiled with djgpp v2.02 and gcc 2.8.1.
+
+-----------------------------------------------------------------------------
+v1.0.4 released. Sources and binaries uploaded to DJ's server and my home
+page. Linux sources and binaries uploaded to my home page (including a
+dynamic version).
+
 Revision 1.23  1999/02/16 00:33:56  set
 * Added more information in readme.txt and fixed some typos.
 * Changed the version to 1.0.4 because I'll release it soon.
