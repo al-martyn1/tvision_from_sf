@@ -140,7 +140,10 @@ if ($OS ne 'Win32')
    $MakeDefsRHIDE[3].=' ../../intl/dummy' if $UseDummyIntl;
    $ExtraModifyMakefiles{'vpath_src'}="../classes/win32 ../stream ../names ../classes .. ../djgpp\nvpath %.h ../djgpp";
    `cp djgpp/makefile win32/Makefile`;
-   ModifyMakefiles('win32/Makefile');
+   ModifyMakefiles('win32/Makefile','compat/compat.mak');
+   # No the examples because they are needed by the current target
+   # 'examples/rhide.env'
+   CreateRHIDEenvs('win32/rhide.env');
   }
 # Help BC++ target
 `perl confignt.pl`;
