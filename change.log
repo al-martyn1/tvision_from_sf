@@ -1,8 +1,12 @@
 $Log: change.log,v $
+Revision 2.367  2002/12/03 12:29:34  set
+* Added: TListView now does PageUp/Down with the mouse wheel.
+* Added: Text selected in TInputLines is copied to the selection clipboard.
+
 Revision 2.366  2002/12/03 12:28:29  set
 * Modified: The GetKbdMapping behavior. Now it must be called for each
 setting individually and can be redefined by each driver.
-.
+
 Revision 2.365  2002/11/29 12:49:07  set
 * Modified: Moved CLY_Beep to TScreen::Beep. It allows drivers that needs
 access to low level stuff to define it properly. X11 is a clear case, you
