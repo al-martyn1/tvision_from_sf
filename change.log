@@ -1,4 +1,10 @@
 $Log: change.log,v $
+Revision 1.108  1999/09/24 00:55:36  set
+* Fixed: A bug introduced by us to the TFileList class in the vertical scroll
+bar (wrong page step). I added a new member to TListViewer to fix it, is
+called setNumCols(int aNumCols) and it also updates scroll bars (not just the
+number of columns). Reported by Sean <sproctor@enter.net>.
+
 Revision 1.107  1999/09/24 00:28:24  set
 * Added: Better handling of some situations in TScreen, patch from Robert:
 "I made now a patch for tscreen.cc to use at firts the infromation
@@ -8,7 +14,7 @@ set_a_foreground and set_a_background strings and only if
 they are not defined using set_foreground and set_background.
 The reason for this is, that I analized some terminfo records and
 found, that often the set_a_... are defined but not the set_..."
-
+.
 Revision 1.106  1999/09/23 23:55:42  root (set)
 * Fixed: Relative symlinks for dynamic libraries [Linux]. Patch by Ivan.
 * Fixed: Pemission 644 and not 755 for libraries [Linux]. Patch by Ivan.
