@@ -1,5 +1,9 @@
 $Log: change.log,v $
-Revision 1.187  2001/09/04 18:32:14  root
+Revision 1.188  2001/09/04 19:23:48  root
+* Fixed: [Win32+BC++] bug when only one key modifier (Shift, Control, Alt)
+was detected. Patch from Anatoli Soltan <anatoli@iname.com>
+
+Revision 1.187  2001/09/04 18:32:14  set
 * Added: inline TMenuItem& operator + ( TMenuItem& s, TMenuItem& i ).
 It makes the creation of nested menues more readable. Sugested by Dean
 Wakerley <dean@wakerley.com>.
