@@ -1,7 +1,11 @@
 $Log: change.log,v $
+Revision 2.409  2003/04/07 13:39:55  set
+* Added: Support for the new i18n features to TCluster it affects
+TCheckBoxes and TRadioButtons.
+
 Revision 2.408  2003/04/07 13:39:03  set
 * Fixed: The dialog design example to use the new API style.
-.
+
 Revision 2.407  2003/04/07 13:36:47  set
 * Modified: Now TMenu and TStatusLine are "i18n award". It means that when
 translations are enabled these classes translates their strings on the fly
