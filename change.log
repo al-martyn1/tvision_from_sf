@@ -1,4 +1,14 @@
 $Log: change.log,v $
+Revision 1.242.2.30  2002/06/06 19:35:14  set
+* Fixed: The gcc 3.1 standard C++ streams doesn't define a public methode
+to open a stream from a C stream/file handle. It wasn't this way in 3.0 and
+3.1 pre-releases (which were supposed to be ISO C++ compliant). To overcome
+this problem I wrote a wrapper for std::filebuf. That's ultra compiler
+version specific and I don't know how many time will be supported. This
+idea was suggested by Andris. The modifications are small, but implied some
+work to understand how stdc++ works. BTW: stdc++ itself needs a similar
+trick for cout/cin associated with stdout/stdin ...
+.
 Revision 1.242.2.29  2002/05/16 21:22:35  set
 * Modified: [Linux] Added Scroll-Lock to the patch list, it freezies the
 application and some people thinks it hanged. To make it worst some idiots
