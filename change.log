@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 1.242.2.13  2001/12/30 23:33:01  set
+* Fixed: A couple of new[]/delete style missmatches while debugging setedit
+with MSS 1.2.1.
+
 Revision 1.242.2.12  2001/12/30 18:31:09  set
 * Added: Support for MSS 1.2.1 and fixed missing delete [] in demo. Patches
 by Laurynas.
@@ -1567,7 +1571,7 @@ give just another example on how to use it with TVision.
 Revision 1.11  1999/01/19 22:33:36  set
 * Released the 1.0.3 version and uploaded to DJ's server.
 .
-Revision 1.9  1999/01/18 22:55:18  root (set)
+Revision 1.9  1999/01/18 22:55:18  set
 * Copied the changes from DOS.
 * Added the versions of libraries I use for Linux in the change.log.
 
