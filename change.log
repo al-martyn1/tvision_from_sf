@@ -1,7 +1,11 @@
 $Log: change.log,v $
-Revision 2.399.2.117  2003/08/11 13:45:35  set
+Revision 2.399.2.118  2003/08/11 13:47:28  set
+* Modified: [Configuration] to avoid including the compilation directory in
+the headers path when --no-libs-here is specified. Pointed out by Ivan.
+
+Revision 2.399.2.117  2003/08/11 13:45:35  terrible
 * Updated: Debian packaging to 2.0.2-1 version!
-.
+
 Revision 2.399.2.116  2003/08/06 15:28:44  set
 * Fixed: The snprintf replacement wrote to NULL pointers.
 
