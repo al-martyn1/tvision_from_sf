@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.560  2004/08/24 13:31:27  set
+* Fixed: Call to drawView() before updating the topItem memeber in
+TListViewer::focusItem. Patch by Egon Eckert (egon/heaven/industries/cz).
+.
 Revision 2.559  2004/08/23 20:43:53  set
 * Added: Sorted directories for the non POSIX platforms in TDirListBox.
 * Modified: The TDirListBox code to be easier to maintain. I hope the
