@@ -1,5 +1,8 @@
 $Log: change.log,v $
-Revision 1.242.2.5  2001/11/28 23:30:06  root
+Revision 1.242.2.6  2001/11/28 23:40:02  root
+* Added: getopt when Solaris is detected.
+
+Revision 1.242.2.5  2001/11/28 23:30:06  set
 * Fixed: gkeyli.cc declared getshiftstate as inline for any OS different
 than Linux (made Solaris fail).
 
