@@ -1,5 +1,9 @@
 $Log: change.log,v $
-Revision 1.192  2001/09/08 20:16:14  root
+Revision 1.193  2001/09/09 19:58:18  root
+* Modified: version to 1.1.1.
+* Added: Comments about the modification of the cursor behavior.
+
+Revision 1.192  2001/09/08 20:16:14  set
 * Added: itoa to the compatlayer. This function is fast for converting
 integers into strings and seems to be suitable for calling from an async
 point (like a signal). I used djgpp implementation.
