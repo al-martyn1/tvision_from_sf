@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.387  2002/12/16 13:30:05  set
+* Fixed: Extra .mak file in files list.
+.
 Revision 2.386  2002/12/14 22:57:31  terrible
 * Updated: Debian packaging to version 2.0.1-0.2.
 
