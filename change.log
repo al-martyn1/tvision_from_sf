@@ -1,4 +1,10 @@
 $Log: change.log,v $
+Revision 1.242.2.23  2002/04/22 17:59:34  set
+* Fixed: The file collection didn't support duplicates, but when it was
+configured to be no case sensitive in an OS that is case sensitive some
+names could look like duplicates and be omitted. Reported by David A.
+Capello <dacap@users.sourceforge.net>.
+
 Revision 1.242.2.22  2002/04/15 14:13:41  set
 * Fixed: [Linux] TScreen's stopcurses() didn't make the tty_file variable
 invalid and hence some functions used it after closing the stream. Patch
@@ -1648,7 +1654,7 @@ library.
 Revision 1.7  1999/01/10 16:25:41  set
 Fixed the demohelp.h32 name (to be lowercase).
 
-Revision 1.6  1999/01/10 16:04:05  root (set)
+Revision 1.6  1999/01/10 16:04:05  set
 Added demo to the Linux distribution.
 
 Revision 1.6  1999/01/10 00:47:21  set
