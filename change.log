@@ -1,5 +1,8 @@
 $Log: change.log,v $
-Revision 2.18  2001/11/25 19:07:33  root
+Revision 2.19  2001/11/28 23:41:26  root
+* Added: getopt when Solaris is detected.
+
+Revision 2.18  2001/11/25 19:07:33  set
 * Added: TEditorApp dependency (TApplication) to the tv.h.
 
 Revision 2.17  2001/11/25 18:46:44  set
