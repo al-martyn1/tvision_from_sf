@@ -1,5 +1,10 @@
 $Log: change.log,v $
-Revision 1.242.2.6  2001/11/28 23:40:02  root
+Revision 1.242.2.7  2001/12/06 01:13:55  set
+* Fixed: Some errors in listvi example. It used constant strings for input
+lines (read only on UNIX and of limited size a disaster). Also fixed the size
+of the columns and input line to be nicer.
+
+Revision 1.242.2.6  2001/11/28 23:40:02  set
 * Added: getopt when Solaris is detected.
 
 Revision 1.242.2.5  2001/11/28 23:30:06  set
