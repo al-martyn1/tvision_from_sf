@@ -1,8 +1,12 @@
 $Log: change.log,v $
-Revision 1.1  1998/12/22 23:57:46  set
-Renamed readme.src to readme.txt.
-Added a small change.log, not yet definitive.
-
+Revision 1.2  1998/12/30 01:01:12  set
+Removed the redundant translation of the Linux IOCTL shift flags to BIOS
+format.
+Moved 90% of the conditional code to the Linux module.
+Fixed the Linux code to report left and right alt.
+Added entries to patch the right alt + function key, not only left alt.
+Added Shit+PgUp, Shift+PgDn, Ctrl+Backspace and Ctrl+Space to the list of
+patched keys.
 
 Release 1.0.1
 
@@ -13,6 +17,10 @@ date: 1998/12/14 23:36:35;  author: set;
 Converted all the calls to ctype functions to macros. These macros avoids
 passing negative values.
 Added right dependencies in gpr and makefiles.
+
+Revision 1.1  1998/12/22 23:57:46  set
+Renamed readme.src to readme.txt.
+Added a small change.log, not yet definitive.
 
 Release 1.0.0
 
