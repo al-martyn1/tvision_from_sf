@@ -1,4 +1,11 @@
 $Log: change.log,v $
+Revision 1.195  2001/09/16 12:44:19  root
+* Fixed: [Linux] Now <sys/ioperm.h> is included only when needed
+(i386+Linux). After fixing it the code compiled for Linux: Alpha, PPC
+(RS/6000) and SPARC (Ultra60 w/2 CPUs) and FreeBSD+x86. Some big endian
+details must be solved but the demo works for all the platforms. Some
+configuration details must also be solved.
+
 Revision 1.194  2001/09/09 22:10:48  set
 * Fixed: [BC++/Win32] Some unused variable warnings. It looks like BC++ 5.5
 needs something like if (unused) unused=0; to understand we don't want it.
@@ -7,7 +14,7 @@ needs something like if (unused) unused=0; to understand we don't want it.
 makefile.
 * Modified: intl.h to define HAVE_INTL_SUPPORT as 1 like in the
 configuration file or gcc will get mad.
-
+.
 Revision 1.193  2001/09/09 19:58:18  set
 * Modified: version to 1.1.1.
 * Added: Comments about the modification of the cursor behavior.
