@@ -1,7 +1,12 @@
 $Log: change.log,v $
+Revision 2.399.2.138.2.10  2004/10/26 16:29:34  set
+* Added: [AlCon] SetCrtModeRes and linked DoResize to SetFont. With this
+the driver can change the window size and font size on-the-fly. Some issues
+remains unsolved.
+
 Revision 2.399.2.138.2.9  2004/10/25 21:19:08  set
 * Added: [AlCon] Support for fonts of width!=8.
-.
+
 Revision 2.399.2.138.2.8  2004/10/22 14:55:51  set
 * Added: [AlCon] Palette support.
 
