@@ -1,9 +1,16 @@
 $Log: change.log,v $
+Revision 1.113  1999/10/10 14:57:57  set
+* Added: Support for DOS greek keyboards.
+* Modified: Now all the classes that uses acelerators doesn't directly check
+the ASCII of the acelerator with the keyboard ASCII. That's because the same
+key could generate more than one ASCII. That's the case of greek keyboards
+where the keyboard generates the latin and greeks values.
+
 Revision 1.112  1999/10/02 15:18:07  set
 * Added: some files missing in the distribution, not indispensable ones.
 * Added: [DOS] Now the configure script patches libint.h in case the user
 have a buggy one (found in gettext 0.10.32).
-
+.
 Revision 1.111  1999/09/28 02:25:00  set
 * Fixed: Applied patch for Debian files from Ivan.
 .
