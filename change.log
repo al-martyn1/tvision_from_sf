@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.432  2003/04/30 18:18:49  set
+* Fixed: When doing incremental searches in sorted list boxes some times
+the cursor disapeared.
+.
 Revision 2.431  2003/04/25 19:43:36  set
 * Fixed: [X11] Under some situations after a resize the cursor disapear.
 Now I added an explicit enable.
