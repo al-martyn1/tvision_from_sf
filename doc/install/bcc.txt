@@ -4,10 +4,11 @@ Builder 6 for it, that's compiler version 5.6. But I can do periodical tests
 only with the former. If you want to volunteer to periodically test the code
 with other versions please let me know.
 
-$Id: bcc.txt,v 1.1.2.1 2003/06/23 14:08:28 set Exp $
+$Id: bcc.txt,v 1.1.2.2 2003/06/26 19:08:39 set Exp $
 
 1. INTRODUCTION
 2. HOW TO COMPILE
+3. INSTALLATION
 
 
 
@@ -61,4 +62,9 @@ B) The old mechanism:
 See: winnt/readme.txt
 
 
+
+3. INSTALLATION
+
+  Currently this target needs manual installation. You can also use the files
+without installing just providing the paths to the compiler.
 
