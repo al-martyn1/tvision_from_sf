@@ -1,9 +1,20 @@
 $Log: change.log,v $
+Revision 1.90  1999/08/11 01:43:49  set
+* Applied 7 patches from Laurynas Biveinis <lauras@softhome.net>, he adapted
+a lot of patches floating around the net for the original TV to this port:
+* Fixed: TGroup re-entrancy fix
+* Fixed: memory leak in TNSCollection
+* Fixed: disabled views can be selected through labels
+* Fixed: TCheckBoxes & TRadioButtons problem with streams
+* Fixed: TChDirDialog::shutDown()
+* Fixed: TEditor sometimes fails to find words
+* Fixed: bug in TFileDialog::valid()
+
 Revision 1.89  1999/08/07 21:30:11  set
 * Added: Now TListViewer is verbose and sends a broadcast when a new item is
 focused. It can be used to update other views according to it.
 * Updated Robert Hoehne's license text.
-
+.
 Revision 1.88  1999/08/03 02:04:57  set
 * Added: Now TClusters (TRadioButton and TCheckBox) sends broadcasts to your
 owner each time the movedTo and press member are called. This behavior is the
