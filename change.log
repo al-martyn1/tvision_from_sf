@@ -1,4 +1,12 @@
 $Log: change.log,v $
+Revision 1.220  2001/10/10 14:56:15  root
+* Fixed: The TRangeValidator was supposed to support hexa numbers but
+didn't accept A-Fa-f. Also changed the complex and slow scanfs to
+strtol/stroul. Reported and solutions suggested by Andris.
+* Added: An example of TRangeValidator to the Tutorial number 16. I used it
+to test the changes ;-). I also added an example of the messageBoxes that
+uses printf style parameters.
+
 Revision 1.219  2001/10/08 23:36:18  set
 * Fixed: [gcc 3.x] fpstream(int fd) was creating a text mode stream and not
 binary.
@@ -9,7 +17,7 @@ v2.x and v3.x. So now I created a compatlayer macro: IfStreamGetLine(object,
 buffer, size). For gcc it expands to object.getline(buffer,size) but for bcc
 is expanded to a function call that makes get for the line and then removes
 the EOL. Now the demo and tutorials seems to work for the three compilers.
-.
+
 Revision 1.217  2001/10/07 22:21:16  set
 * Fixed: The demo to work with gcc 3.x streams. Andris suggested the fix
 according to the following information: C++ standard draft at
