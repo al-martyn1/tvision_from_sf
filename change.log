@@ -1,7 +1,12 @@
 $Log: change.log,v $
+Revision 1.112  1999/10/02 15:18:07  set
+* Added: some files missing in the distribution, not indispensable ones.
+* Added: [DOS] Now the configure script patches libint.h in case the user
+have a buggy one (found in gettext 0.10.32).
+
 Revision 1.111  1999/09/28 02:25:00  set
 * Fixed: Applied patch for Debian files from Ivan.
-
+.
 Revision 1.110  1999/09/24 02:57:52  set
 * Fixed: I forgot to uncomment a test in the TListView class. It produced the
 wrong broadcast when the focus changed.
