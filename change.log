@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.370  2002/12/06 16:12:12  set
+* Fixed: [Win32] typo in WinGr driver.
+
 Revision 2.369  2002/12/04 21:18:22  terrible
 * Updated: Debian packaging to 2.0.1-0.1.
 
@@ -8,7 +11,7 @@ They must be provided by the font callback as the primary. I added code to
 X11, Linux and DOS drivers for it. The last is untested.
 * Fixed: The Linux driver failed when resquesting to just load the
 secondary font.
-.
+
 Revision 2.367  2002/12/03 12:29:34  set
 * Added: TListView now does PageUp/Down with the mouse wheel.
 * Added: Text selected in TInputLines is copied to the selection clipboard.
