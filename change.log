@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.28  2001/12/30 18:35:46  set
+* Fixed: Compatlayer undefined FA_DIREC even in cases that didn't redefine
+it.
+.
 Revision 2.27  2001/12/30 18:33:33  set
 * Added: Support for MSS 1.2.1 and fixed missing delete [] in demo. Patches
 by Laurynas.
