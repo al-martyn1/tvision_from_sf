@@ -1,9 +1,15 @@
 $Log: change.log,v $
+Revision 2.149  2002/06/12 15:40:03  set
+* Added: [Linux] Code page detection to the driver. It needs console
+IOCTLs. If we can't use them the driver tries to guess using the LANG
+environment variable.
+* Added: Symbolic names for all the supported code pages.
+
 Revision 2.148  2002/06/12 12:34:12  set
 * Added: A first step towards Linux console code page detection. Curently
 the code only works for full console access and differentiates between
 lat1, lat1u and koi8-r code pages.
-.
+
 Revision 2.147  2002/06/11 19:10:32  set
 * Fixed: [XTerm] Window title set/get details.
 .
