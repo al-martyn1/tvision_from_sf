@@ -1,5 +1,11 @@
 $Log: change.log,v $
-Revision 1.212  2001/09/30 21:03:31  root
+Revision 1.213  2001/10/06 18:19:12  root
+* Added: Support for localized decimal point in the pocket calculator. The
+user types the '.' key but the calculator displays the right decimal point
+symbol. Without it the calculator fails to work for locales that uses
+another decimal point (like mine).
+
+Revision 1.212  2001/09/30 21:03:31  set
 * Fixed: Now the scripts generate Debian versions with -0.1 as suggested by
 Ivan.
 * Fixed: debian/control.in had extra \n at the end that were passed to
