@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.252  2002/08/12 16:25:04  set
+* Added: [DOS] Support for the setCtrModeRes member. It searchs the closest
+mode available. I also tested VESA modes successfuly.
+
 Revision 2.251  2002/08/12 16:07:09  set
 * Added: X11, Linux and DOS drivers now tests if the font callback is
 installed. In this case these drivers tries to use an application font
@@ -7,7 +11,7 @@ before start drawing. Untested.
 X11 and XTerm drivers. XTerm tries to use a fixed font from a list of
 known XFree86 fixed fonts. X11 tries to get a font from the callback or
 use 8x16/10x20 internal fonts.
-.
+
 Revision 2.250  2002/08/12 16:05:49  set
 * Added: 2 new configuration variables: ScreenWidth and ScreenHeight. I
 added support for it to the X11, XTerm, DOS, Win32 and WinNT drivers, but
