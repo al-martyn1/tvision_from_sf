@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.150  2002/06/12 16:46:38  set
+* Modified: [X11] the driver now uses ISO-8859-1 fonts instead of PC437.
+
 Revision 2.149  2002/06/12 15:40:03  set
 * Added: [Linux] Code page detection to the driver. It needs console
 IOCTLs. If we can't use them the driver tries to guess using the LANG
@@ -12,7 +15,7 @@ lat1, lat1u and koi8-r code pages.
 
 Revision 2.147  2002/06/11 19:10:32  set
 * Fixed: [XTerm] Window title set/get details.
-.
+
 Revision 2.146  2002/06/11 16:15:07  set
 * Fixed: [UNIX] ln error when overwriting the libtvfdummy.a link.
 
