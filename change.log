@@ -1,7 +1,7 @@
 $Log: change.log,v $
-Revision 2.70  2002/05/15 19:58:21  set
-* Added: A directory called include/tv/skeleton with explained headers that
-could help creating a new driver.
+Revision 2.71  2002/05/15 20:43:48  set
+* Added: The first patches to configure under QNX, they just add QNX
+detection but more will be added. Patches by Mike Gorchak <mike@malva.ua>
 
 Revision 2.69  2002/05/15 19:06:14  set
 * Fixed: Default CFLAGS for FreeBSD used -L/usr/local/include. Reported by
