@@ -1,7 +1,12 @@
 $Log: change.log,v $
+Revision 2.77  2002/05/17 18:54:31  set
+* Added: More configuration patches for QNX from Mike. Complements the
+special flags for dynamic libs patch and workarounds a library search
+issue of QNX 6.2 beta 3.
+
 Revision 2.76  2002/05/17 18:33:20  set
 * Modified: RHIDE project to include QNX sources from Mike.
-.
+
 Revision 2.75  2002/05/16 21:21:12  set
 * Modified: [Linux] Added Scroll-Lock to the patch list, it freezies the
 application and some people thinks it hanged. To make it worst some idiots
