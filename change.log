@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.615  2005/05/18 15:43:06  set
+* Added: First step towards Open Watcom support. It just detects Watcom
+compiler and defines it almost like BC++.
+.
 Revision 2.614  2005/05/18 13:45:14  set
 * Fixed: Extra ) in TInput1Line declaration. Reported by Frank Taffelt
 (frank taffelt web de).
