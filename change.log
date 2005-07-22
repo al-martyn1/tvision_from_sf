@@ -1,7 +1,10 @@
 $Log: change.log,v $
+Revision 2.399.2.249  2005/07/22 17:57:34  set
+* Added: TPXPictureValidator, not tested. Closes SF FR #1235527.
+
 Revision 2.399.2.248  2005/07/21 20:45:23  set
 * Added: [WWW] CVS snapshot for Sarge (SPARC).
-.
+
 Revision 2.399.2.247  2005/07/19 14:19:22  set
 * Fixed: [GCC] Some gcc versions only have "strstream" (not .h). Reported
 by Vik while using Fedora Core 4.
