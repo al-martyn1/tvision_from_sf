@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.399.2.255  2005/07/29 13:19:12  set
+* Added: A helper function to TView called putEvent. It fills a TEvent
+structure and calls putEvent (the original one). That's a common operation.
+
 Revision 2.399.2.254  2005/07/29 13:17:49  set
 * Added: [Cosmetic] Icon animations for the close and zoom icons of TFrame.
 Based on code sent by Eddie. It can be disabled.
@@ -7,7 +11,7 @@ Revision 2.399.2.253  2005/07/29 13:16:00  set
 * Fixed: [MSVC] Ambiguous call to stdio's read. In modern C++ that's an
 overloaded function. So now TFileViewer::real_bufsize is of ssize_t type. I
 also changed some code to handle size_t return values. Reported by Eddie.
-.
+
 Revision 2.399.2.252  2005/07/27 20:23:02  set
 * Modified: [DJGPP?] Added workaround for problems compiling without i18n
 support using gcc 2.95.2 19991024 (release). Reported by Thiago.
