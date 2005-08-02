@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.646  2005/08/02 14:49:24  set
+* Fixed: [MSVC] Wrong pragma usage. Pointed out by Eddie.
+.
 Revision 2.645  2005/08/02 14:07:29  set
 * Modified: [MSVC] Disabled warning 4291 in histlist.cc. The compiler is
 wrong.
