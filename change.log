@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.399.2.312  2006/02/06 18:28:12  set
+winGr also uses it
+.
 Revision 2.399.2.311  2006/02/06 18:27:23  set
 ALT-GR keys, resizing, bugs
 .
