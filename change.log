@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.399.2.314  2006/02/07 11:50:07  set
+colored menu
+.
 Revision 2.399.2.313  2006/02/07 11:48:57  set
 reads config file, video modes, bugfixes
 .
