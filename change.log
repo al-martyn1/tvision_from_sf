@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.702  2007/05/08 19:43:52  terrible
+* Updated: [Debian] Packaging to version 2.1.0-3, small things.
+
 Revision 2.701  2007/04/18 15:45:11  set
 * Fixed: [Makefile] added -f to the rm command to remove the old symblinks
 to avoid messages from rm.
@@ -671,7 +674,7 @@ MAINTAINER_MODE.
 .
 Revision 2.570  2004/09/20 14:47:45  set
 * Fixed: [gcc 3.x] Warning in compat/snprintf.c. Reported by Nicola Asuni.
-.
+
 Revision 2.569  2004/09/20 14:18:34  set
 * Added: [Config] A command line option to specify a path for includes.
 This path is used for the configuration tests and for the library.
