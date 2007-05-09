@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.399.2.341  2007/05/09 12:54:16  set
+* Updated: [Debian] Packaging to version 2.1.0-3, small things.
+.
 Revision 2.399.2.340  2007/05/09 12:28:18  set
 * Modified: The default time to sleep when no events are available. It was
 10 µs, good for most Linux kernels, but 2.6.21 reduces the granularity and
