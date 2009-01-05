@@ -1,10 +1,14 @@
 $Log: change.log,v $
+Revision 2.399.2.362  2009/01/05 16:29:22  set
+* Added: [doc] Visual Studio 2008 compilation procedure. Contributed by
+Harry Sack <tranzedude/gmail/com>
+
 Revision 2.399.2.361  2008/08/28 11:29:46  set
 [Updated] Debian version to 2.1.0-4.
-.
+
 Revision 2.399.2.360  2008/07/10 16:11:24  set
 * Modified: [Debian] To also support libgm-dev as a builing package.
-.
+
 Revision 2.399.2.359  2008/07/10 16:10:05  set
 * Added: Some equivalences to the Unicode table.
 
