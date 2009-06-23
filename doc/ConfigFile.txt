@@ -1,7 +1,7 @@
 Topics: Configuration file, TVConfigFile, TVMainConfigFile
 Author: Salvador E. Tropea
 Status: Complete
-Revision: $Revision: 1.3 $
+Revision: $Revision: 1.4 $
 
 1. INTRODUCTION
 2. FROM THE POINT OF VIEW OF THE USER
@@ -61,6 +61,7 @@ configuration information related to TV must be inside this section.
   Each driver have a short name, please read the documentation about the
 drivers to know the names. Here is a the list of currently supported drivers:
 
+AlCon  For the Allegro Conio emulator.
 DOS    For DOS or compatible systems.
 Linux  For GNU/Linux systems.
 QNX    For QNXRtP systems.
