@@ -1,4 +1,8 @@
 $Log: change.log,v $
+Revision 2.738  2009/06/26 11:35:31  set
+* Fixed: The last change in TVConfigFile::GetString() introduced a bug
+(last " not removed).
+.
 Revision 2.737  2009/06/24 14:31:16  set
 * Fixed: [Linux] the keyboard driver filled charScan.charCode twice and
 didn't fill charCode members of the keyDown event.
