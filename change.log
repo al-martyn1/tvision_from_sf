@@ -1,4 +1,10 @@
 $Log: change.log,v $
+Revision 2.746  2010/10/12 18:40:27  set
+* Fixed: [UNIX][X11][xtermkey.cc] The SHIFT+arrow_keys and other similar
+key combinations failed on XTerm. They most probably weren't reported when
+the driver was created (in 2003). Closes SF Bug Report #3078314 submitted
+by an anonymous user.
+.
 Revision 2.745  2010/10/08 17:49:32  set
 * Fixed: [UNIX][X11][x11src.cc] The S_IREAD constant, used for open, is
 defined in sys/stat.h. In GNU/Debian<=5.0 this direct request doesn't seem
