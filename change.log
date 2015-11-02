@@ -1,4 +1,7 @@
 $Log: change.log,v $
+Revision 2.399.2.391  2015/11/02 13:49:03  set
+* Fixed: Compilation error when using NO_STREAM.
+
 Revision 2.399.2.390  2015/05/29 12:20:11  set
 * Modified: [config.pl] The name of the suggested X11 development package.
 The old xlibs-dev is no longer valid. The new suggestion is libxmu-dev, it
@@ -14,7 +17,7 @@ and busyCursorMask to be unsigned char (not just char).
 no-wrap, title and command. Suggested by Steve Dyson.
 * Modified: [winnt/Makefile.nmk] Indentation details.
 * Modified: [winnt/msvcmake.in] To generate the Makefile.nmk I already had.
-.
+
 Revision 2.399.2.389  2013/02/25 12:30:36  set
 * Modified: [BSD] the configuration script to also take BSD's ar as valid
 archiver.
