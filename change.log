@@ -1,8 +1,11 @@
 $Log: change.log,v $
+Revision 2.769  2017/07/31 15:41:37  set
+* Modified: Version to 2.2.2.
+
 Revision 2.768  2017/07/31 13:08:43  set
 * Fixed: [AlCon] Wrong offset in AlCon_GetScrChars and AlCon_PutChar.
 * Fixed: [AlCon] Wrong Delete key mapping.
-.
+
 Revision 2.767  2017/07/30 21:00:14  set
 * Modified: [Debian] DebHelper compat level from 1 to 5, also moved some
 files that are no longer automagically moved.
